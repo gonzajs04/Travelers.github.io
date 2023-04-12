@@ -10,11 +10,31 @@ function iniciarApp(){
     },1300)
     
 
-    consultarDiv();
+   consultarDiv();
+
+    window.addEventListener('scroll',()=>{
+
+        const tours = document.querySelector('.tours')
+        const altura = consultarAltura(tours);
+       
+        const plane = document.querySelector('.container-plane')
+        if(altura<=-56){
+            plane.classList.add('mover-avion')
+        }
+    })
+
+    
    
     aparecerSocialMedia()
 }
 
+
+function consultarAltura(container){
+
+        return container.getBoundingClientRect().top
+   
+   
+}
 
 function aparecerSocialMedia(){
     const flecha = document.querySelector('.container-arrow');

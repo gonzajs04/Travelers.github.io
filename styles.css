@@ -501,9 +501,10 @@ object-position: center;
         position: relative;
         width: 90px;
         bottom: -40%;
-  
-        animation: moverAvion 6s linear ;
     
+    }
+    .mover-avion{
+        animation: moverAvion 6s linear;
     }
 }
 
