@@ -25,7 +25,26 @@ function iniciarApp(){
 
     
    
-    aparecerSocialMedia()
+    aparecerSocialMedia();
+    navegacionSmooth();
+}
+
+function navegacionSmooth(){
+    const smooths = document.querySelectorAll('.smooth');
+    smooths.forEach(smooth=>{
+        if(smooth){
+            smooth.addEventListener('click',(e)=>{
+                e.preventDefault()
+                const href = e.target.attributes.href.value;
+                const section = document.querySelector(href);
+                section.scrollIntoView({behavior:'smooth'})
+           
+                
+            });
+        }
+        return;
+    })
+
 }
 
 
