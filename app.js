@@ -25,7 +25,6 @@ function iniciarApp(){
         const partners = document.querySelector('.partners');
         if(partners){
             altura = consultarAltura(partners);
-            console.log("🚀 ~ file: app.js:28 ~ window.addEventListener ~ altura:", altura)
             let logos = document.querySelectorAll('.logo-partner')
             if(altura<=523){
                logos.forEach(logo=>{
