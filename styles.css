@@ -95,9 +95,8 @@ img{
         padding: 2rem;
         position: relative;
         z-index: 1000;
-      display: flex;
-      flex-direction: column;
-        align-items: center;
+        display: grid;
+        place-items: center;
         height: 80%;
     }
    
@@ -116,17 +115,18 @@ img{
 
 .container-text h1{
     padding: 0;
-    font-size: 3.5rem;
+    font-size: 4.2rem;
     margin: 0;
     text-transform: uppercase;
     color: var(--amarillo);
-    line-height: 7rem;
+    line-height: 4rem;
     letter-spacing: -2px;
 }
 
 @media(min-width:500px){
     .container-text h1{
         font-size: 6rem;
+        line-height: 9rem;
     }
 
 }
@@ -155,7 +155,7 @@ img{
 
 .container-text h2{
     color: white;
-    font-size: 2rem;
+    font-size: 1.4rem;
     text-transform: capitalize;
 
     margin: 0;
@@ -172,6 +172,13 @@ img{
 }
 
 @media(min-width:768px){
+    .container-text h2{
+       
+        font-size: 2rem;
+       
+    
+ 
+    }
     .container-text p{
         width: 419px;
     }
@@ -256,9 +263,10 @@ img{
 
 /*SOCIAL MEDIA*/
 .social-media{
-  
+   
     position: relative;
     z-index: 100;
+    height: 100%;
 }
 .social-media a{
     color: white;
@@ -274,6 +282,7 @@ img{
 
 /*IMG HGERO*/
 .img-hero{
+    min-height: 800px;
     height: 100%;
 }
 .img-hero img
@@ -284,7 +293,7 @@ object-position: center;
 }
 
 .container-social-media{
-    max-width: 1280px;
+    max-width: 1170px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -321,7 +330,7 @@ object-position: center;
 /*ABOUT US*/
 
 .aboutus{
-    padding: 1rem;
+    padding: 2rem 1rem;
   
 
 
@@ -742,6 +751,124 @@ textarea{
     
 }
 
+/*FEATURES*/
+.city{
+ 
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 1000000;
+}
+.container-features{
+    height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+@media(min-width:870px){
+  
+    .container-features{
+        height: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    
+    }
+    
+
+}
+
+.container-cityimg{
+    height: 500px;
+}
+.container-cityimg img{
+    object-fit: cover;
+    filter: brightness(.6);
+}
+
+
+.city:hover > .panel{
+    display: flex;
+    align-items: flex-end;
+    opacity: 1;
+}
+
+.panel{
+    display: none;
+    opacity: 0;
+    background-color:#1f1f1fb1;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    transition: opacity .5s ease-in-out;
+ 
+}
+.panel:hover{
+    cursor: pointer;
+
+}
+.panel a:hover{
+    text-decoration: overline;
+}
+
+
+.panel-visible{
+    display: flex;
+    align-items: end;
+    opacity: 1;
+}
+
+.panel a{
+    color: white;
+    margin: 1rem 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+.container-citytext{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    position: absolute;
+    top: 0;
+   margin: 0 1rem;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.container-citytext p,h2{
+    margin: 0;
+    text-transform: uppercase;
+}
+.container-citytext p{
+    letter-spacing: 1px;
+    width: 100%;
+    font-size: .7rem;
+}
+
+@media(min-width:870px){
+    
+    .container-citytext p,h2{
+        margin: 0;
+        text-transform: uppercase;
+    }
+    .container-citytext p{
+      
+        font-size: 1rem;
+    }
+    .container-citytext h2{
+     
+        font-size: 2rem;
+    }
+    
+}
+
 .footer{
     background-color: black;
     padding: 1rem 0;
@@ -758,9 +885,48 @@ textarea{
 }
 
 
+
+
+
+/*container-partners*/
+.partners{
+    position: relative;
+    padding: 6rem 0;
+    max-width: 1400px;
+    margin: 0 auto;
+
+
+    
+}
+.container-partners{
+    background-color: rgba(153, 153, 153, 0.151);
+    z-index: 1000;
+
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+.partners h2{
+    font-size: 4rem;
+    margin: 0rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid black;
+    padding: 0 2rem;
+}
+
+.logo-partner{
+    width: 150px;
+    opacity: 0;
+
+}
+
+
 .aparecer{
     animation: aparecer 1.3s linear;
-
+  
     opacity: 1;
 }
 
@@ -774,5 +940,3 @@ textarea{
     }
     
 }
-
-

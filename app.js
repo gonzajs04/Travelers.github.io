@@ -15,19 +15,66 @@ function iniciarApp(){
     window.addEventListener('scroll',()=>{
 
         const tours = document.querySelector('.tours')
-        const altura = consultarAltura(tours);
+        var altura = consultarAltura(tours);
        
         const plane = document.querySelector('.container-plane')
         if(altura<=-56){
             plane.classList.add('mover-avion')
         }
+
+        const partners = document.querySelector('.partners');
+        if(partners){
+            altura = consultarAltura(partners);
+            console.log("🚀 ~ file: app.js:28 ~ window.addEventListener ~ altura:", altura)
+            let logos = document.querySelectorAll('.logo-partner')
+            if(altura<=523){
+               logos.forEach(logo=>{
+                logo.classList.add('aparecer')
+               })
+            }
+        }
+      
+        
+
+        
     })
 
     
    
     aparecerSocialMedia();
     navegacionSmooth();
+
+    // generarPanel()
 }
+
+// function generarPanel(){
+//     const citys = document.querySelectorAll('.city')
+//     citys.forEach(city=>{
+//         city.addEventListener('mouseover',()=>{
+//             mostrarPanel(city)
+//         })
+
+//         city.addEventListener('mouseleave',()=>{
+//             eliminarPanel(city)
+//         })
+//     })
+// }
+// function eliminarPanel(city){
+//     let panel = city.querySelector('.panel')
+//     if(panel){
+//         panel.classList.remove('panel-visible')
+
+//     }
+// }
+
+// function mostrarPanel(city){
+//     let panel = city.querySelector('.panel')
+//    if(panel){
+//     panel.classList.add('panel-visible')
+//    }
+    
+
+// }
 
 function navegacionSmooth(){
     const smooths = document.querySelectorAll('.smooth');
