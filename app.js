@@ -23,12 +23,15 @@ function iniciarApp(){
         }
 
         const partners = document.querySelector('.partners');
+        const containerPartners = document.querySelector('.container-partners')
         if(partners){
             altura = consultarAltura(partners);
             let logos = document.querySelectorAll('.logo-partner')
             if(altura<=523){
                logos.forEach(logo=>{
                 logo.classList.add('aparecer')
+                containerPartners.classList.add('alargar')
+               
                })
             }
         }

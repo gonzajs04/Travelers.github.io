@@ -13,10 +13,15 @@ body{
 :root{
     --fuentePrincipal: 'Poppins', sans-serif;
     --amarillo: #FFD500;
+    --color-inactivo: #5f5050;
+            --color-estrella: #ffa400;
 }
 
 h1,h2,h3,h4,p,a,input,select,option,textarea,button,label,span{
     font-family: var(--fuentePrincipal);
+}
+textarea{
+    color: white;
 }
 a{
     text-decoration: none;
@@ -46,7 +51,7 @@ img{
 
     z-index: 1000;
 }
-@media(min-width:645px){
+@media(min-width:768px){
     .container-nav{
         flex-direction: row;
         align-items: center;
@@ -64,7 +69,7 @@ img{
     display: block;
     text-align: center;
 }
-@media(min-width:400px){
+@media(min-width:644px){
     .navegation a{
      
  
@@ -186,7 +191,7 @@ img{
     .containerg-imgs{
         display: block;
         position: relative;
-        right: -15%;
+        right: -5%;
         width: 100%;
         height: 100%;
     }
@@ -267,7 +272,7 @@ img{
    
     position: relative;
     z-index: 100;
-    height: 100%;
+  
 }
 .social-media a{
     color: white;
@@ -283,7 +288,7 @@ img{
 
 /*IMG HGERO*/
 .img-hero{
-    min-height: 800px;
+    min-height: 850px;
     height: 100%;
 }
 .img-hero img
@@ -300,7 +305,7 @@ object-position: center;
     flex-direction: column;
     align-items: center;
 }
-@media(min-width:700px){
+@media(min-width:1200px){
     
 .container-social-media{
     flex-direction: row;
@@ -770,9 +775,10 @@ textarea{
 @media(min-width:870px){
   
     .container-features{
-        height: 100%;
-        overflow: hidden;
-        margin: 0 auto;
+
+        overflow-y: hidden;
+        overflow-x: hidden;
+     
         display: grid;
         grid-template-columns: repeat(4,1fr);
     
@@ -836,11 +842,10 @@ textarea{
 .container-citytext{
     display: flex;
     flex-direction: column;
-
+    margin: 0 1rem;
     justify-content: center;
     position: absolute;
     top: 0;
-   margin: 0 1rem;
     color: white;
     width: 100%;
     height: 100%;
@@ -873,13 +878,16 @@ textarea{
     
 }
 
+
+
 .footer{
-    background-color: black;
-    padding: 1rem 0;
+    background-color: #1E1E1E;
+    padding: .5rem 0;
     font-size: .8rem;
     color: white;
     text-align: center;
 }
+
 
 @media(min-width:500px){
     .footer{
@@ -888,15 +896,177 @@ textarea{
 
 }
 
+.container-social-rate{
+   display: grid;
+   row-gap: 3rem;
+   max-width: 1300px;
+   place-items: center;
+   margin: 0 auto;
+}
+@media(min-width:1220px){
+    .container-social-rate{
+        grid-template-columns: repeat(3,1fr);
+ 
+    }
 
+}
+.company{
+    height: 100%;
+}
+.company p{
+    max-width: 250px;
+    margin: 0;
+    font-size: .8rem;
+    text-align: justify;
+}
+.opinion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.opinion h3{
+    margin: 0;
+}
+.socials{
+    height: 100%;
+  
+}
+.title-socials{
+    margin-top: 1.5rem;
+}
+.icon-socials{
+    margin: 1.7rem 0;
+}
+.valoracion {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.valoracion button {
+    background-color: initial;
+    border: 0;
+    color: var(--color-inactivo);
+    transition: 1s all;
+
+ 
+
+
+}
+.company-data{
+    padding: 1rem 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.valoracion button:hover {
+    cursor: pointer;
+    color: var(--color-estrella);
+    transform: rotate(360deg);
+    filter: drop-shadow(0px 0px 58px rgba(255,248,48,1));
+}
+button:nth-child(1):hover ~ button {
+    color: var(--color-estrella);
+    transform: rotate(360deg);
+    
+
+}
+button:nth-child(2):hover ~ button {
+    color: var(--color-estrella);
+    transform: rotate(360deg);
+}
+button:nth-child(3):hover ~ button {
+    color: var(--color-estrella);
+    transform: rotate(360deg);
+}
+button:nth-child(4):hover ~ button {
+    color: var(--color-estrella);
+    transform: rotate(360deg);
+}
+button:nth-child(5):hover ~ button {
+    color: var(--color-estrella);
+    transform: rotate(360deg);
+}
+
+/*SOCIAL MEDIA*/
+.c-icon {
+    width:  36px;
+    height: 36px;
+    fill: currentColor;
+    transition: .2s;
+}
+
+.c-link--facebook:hover  { color: #3b5998 }
+.c-link--twitter:hover   { color: #55acee }
+.c-link--pinterest:hover { color: #bd081c }
+.c-link--instagram:hover { color: #833ab4 }
+.c-link--facebook:hover::after  { background: #3b5998 }
+.c-link--twitter:hover::after   { background: #55acee }
+.c-link--pinterest:hover::after { background: #bd081c }
+.c-link--instagram:hover::after { background: #833ab4 }
+
+.c-link {
+    position: relative;
+    color: #bbb;
+}
+
+.c-link:not(:last-of-type) {
+    margin-right: 15px;
+}
+
+.c-tooltip::before,
+.c-tooltip::after {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -10px);
+    opacity: 0;
+    transition: .2s;
+}
+
+.c-tooltip::before {
+    content: '';
+    bottom: calc(100% + 2px);
+    border: solid 5px transparent;
+    border-top-color: currentColor;
+}
+
+.c-tooltip::after {
+    content: attr(aria-label);
+    bottom: calc(100% + 12px);
+    padding: .61em .93em;
+    font-size: .875rem;
+    color: white;
+    border-radius: 3px;
+}
+
+.c-tooltip:hover::before,
+.c-tooltip:hover::after {
+    opacity: 1;
+    transform: translate(-50%);
+}
+
+.pens-link-container {
+    flex-basis: 100%;
+    font-size: .9rem;
+    text-align: center;
+}
+
+.pens-link {
+    margin-bottom: 0;
+    background: white;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .1);
+    border: none;
+}
 
 
 
 /*container-partners*/
 .partners{
     position: relative;
-    padding: 6rem 1rem;
+    padding: 6rem 0rem;
     max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
     color: #1e1e1e;
 
@@ -912,16 +1082,13 @@ textarea{
     align-items: center;
     justify-content: space-around;
     height: 100%;
+
     padding: 0 2rem;
+
 
 }
 
-.partners h2{
-    font-size: 3rem;
-    border: none;
-    padding: 0 2rem;
-    text-align: center;
-}
+
 
 .logo-partner{
     width: 150px;
@@ -949,10 +1116,11 @@ textarea{
 
 
 .aparecer{
-    animation: aparecer 1.3s linear;
+    animation: aparecer 2s linear;
   
     opacity: 1;
 }
+
 
 @keyframes aparecer {
 
@@ -961,6 +1129,16 @@ textarea{
     }
     100%{
         opacity: 1;
+    }
+    
+}
+
+@keyframes alargar {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
     }
     
 }
