@@ -916,11 +916,21 @@ textarea{
 .company{
     height: 100%;
 }
+
 .company p{
     max-width: 250px;
     margin: 0;
     font-size: .8rem;
-    text-align: justify;
+    text-align: center;
+}
+@media(min-width:1219px){
+    .company p{
+
+ 
+   
+        text-align: justify;
+    }
+
 }
 .opinion{
     display: flex;
