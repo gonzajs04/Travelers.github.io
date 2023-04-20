@@ -40,6 +40,26 @@ img{
 }
 /*NAVEGACION*/
 
+.container-menu{
+    width: 40px;
+    position: relative;
+    z-index: 100000;
+    transition: transform .6s ease-in-out;
+    display: block;
+}
+.container-menu:hover{
+    cursor: pointer;
+    transform: rotate(180deg);
+    
+}
+
+@media(min-width:768px){
+    
+    .container-menu{
+        display: none;
+    }
+}
+
 .container-nav{
  
     position: relative;
@@ -69,15 +89,32 @@ img{
     display: block;
     text-align: center;
 }
-@media(min-width:644px){
+@media(min-width:768px){
     .navegation a{
      
- 
+    
         display: inline;
         text-align: left;
     }
 
 }
+
+.navegation{
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+@media(min-width:768px){
+    .navegation{
+        opacity: 1;
+    }
+    
+
+}
+
+.opacity-nav{
+   opacity: 1;
+}
+
 
 /**/
 
@@ -284,7 +321,7 @@ img{
 
 /*IMG HGERO*/
 .img-hero{
-    min-height: 950px;
+    min-height: 1150px;
     height: 100%;
 }
 @media(min-width:768px){

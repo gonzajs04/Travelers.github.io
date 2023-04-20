@@ -36,13 +36,13 @@ function iniciarApp(){
             }
         }
       
-        
+
 
         
     })
 
     
-   
+    evaluarMenuClick()
     aparecerSocialMedia();
     navegacionSmooth();
 
@@ -77,6 +77,19 @@ function iniciarApp(){
     
 
 // }
+
+function evaluarMenuClick(){
+    const menu = document.querySelector('.container-menu');
+    if(menu){
+        menu.addEventListener('click',desplegarMenu)
+    }
+}
+function desplegarMenu(e){
+
+    const navegation = document.querySelector('.navegation');
+    navegation ? navegation.classList.toggle('opacity-nav') : '';
+    
+}
 
 function navegacionSmooth(){
     const smooths = document.querySelectorAll('.smooth');
