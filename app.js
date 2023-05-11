@@ -142,10 +142,10 @@ function consultarDiv(){
     
     const containerNav = document.querySelector('.container-nav');
     const containerText= document.querySelector('.container-text')
-    const containerImgs = document.querySelector('.containerg-imgs')
+    // const containerImgs = document.querySelector('.containerg-imgs')
     aparecerDiv(containerNav,0);
     aparecerDiv(containerText,1000)
-    aparecerDiv(containerImgs,1300)
+    // aparecerDiv(containerImgs,1300)
 
 
 }
